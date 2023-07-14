@@ -3,19 +3,28 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 def plot_centrality(subgraph, pos, centrality_measure, filename):
+    # Calculate centrality values for all nodes in the subgraph
+    centrality_values = centrality_measure(subgraph)
+
+    # Sort nodes based on centrality values and select top 50 nodes
+    top_nodes = sorted(centrality_values, key=centrality_values.get, reverse=True)[:50]
+
+    # Create a subgraph with top nodes and their neighbors
+    subgraph_top = subgraph.subgraph(top_nodes + list(subgraph.neighbors(n) for n in top_nodes))
+
     fig, ax = plt.subplots(1, 1, figsize=(10, 8))
 
     # Color of nodes based on centrality measure
-    color = list(dict(centrality_measure(subgraph)).values())
+    color = list(dict(centrality_measure(subgraph_top)).values())
 
     # Draw edges
-    nx.draw_networkx_edges(subgraph, pos=pos, alpha=0.4, ax=ax)
+    nx.draw_networkx_edges(subgraph_top, pos=pos, alpha=0.4, ax=ax)
 
     # Draw nodes
-    nodes = nx.draw_networkx_nodes(subgraph, pos=pos, node_color=color, cmap=plt.cm.jet, ax=ax)
+    nodes = nx.draw_networkx_nodes(subgraph_top, pos=pos, node_color=color, cmap=plt.cm.jet, ax=ax)
 
     # Draw labels
-    nx.draw_networkx_labels(subgraph, pos=pos, font_color='white', font_size=4, ax=ax)
+    nx.draw_networkx_labels(subgraph_top, pos=pos, font_color='white', font_size=4, ax=ax)
 
     plt.axis("off")
     plt.colorbar(nodes)
@@ -39,26 +48,41 @@ def plot_eigenvector_centrality(subgraph, pos):
     plot_centrality(subgraph, pos, nx.eigenvector_centrality, 'eigenvector_centrality.png')
 
 
-def plot_pdf(subgraph):
+import matplotlib.pyplot as plt
+import seaborn as sns
+import networkx as nx
+
+def plot_degree_and_centrality(subgraph):
     plt.style.use("fivethirtyeight")
-    #plt.style.use("default")
-    degree_sequence = sorted([d for n, d in subgraph.degree()], reverse=True) 
-    fig, ax = plt.subplots(1, 1, figsize=(10, 8))
+    degree_sequence = sorted([d for n, d in subgraph.degree()], reverse=True)
+    eigenvector_centrality = nx.eigenvector_centrality(subgraph).values()
 
-    sns.histplot(degree_sequence, bins=7, label="Count", ax=ax)
-    ax2 = ax.twinx()
-    sns.kdeplot(degree_sequence, color='r', label="Probability Density Function (PDF)", ax=ax2)
+    fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+    axes = axes.flatten()
 
-    # Ask matplotlib for the plotted objects and their labels
-    lines, labels = ax.get_legend_handles_labels()
-    lines2, labels2 = ax2.get_legend_handles_labels()
-    ax2.legend(lines + lines2, labels + labels2, loc=0)
+    # Plot degree CDF
+    sns.histplot(degree_sequence, bins=30, cumulative=True, stat="density", ax=axes[0])
+    axes[0].set_xlabel("Degree")
+    axes[0].set_ylabel("CDF")
 
-    ax.grid(False)
-    ax2.grid(False)
-    ax.set_xlabel("Degree")
-    ax2.set_ylabel("Probability")
+    # Plot degree PDF
+    sns.histplot(degree_sequence, bins=30, stat="density", ax=axes[1])
+    sns.kdeplot(degree_sequence, color='r', ax=axes[1])
+    axes[1].set_xlabel("Degree")
+    axes[1].set_ylabel("PDF")
 
-    plt.savefig('probability_density_function.png', transparent=True, dpi=600, bbox_inches="tight")
+    # Plot eigenvector centrality CDF
+    sns.histplot(list(eigenvector_centrality), bins=30, cumulative=True, stat="density", ax=axes[2])
+    axes[2].set_xlabel("Eigenvector Centrality")
+    axes[2].set_ylabel("CDF")
+
+    # Plot eigenvector centrality PDF
+    sns.histplot(list(eigenvector_centrality), bins=30, stat="density", ax=axes[3])
+    sns.kdeplot(list(eigenvector_centrality), color='r', ax=axes[3])
+    axes[3].set_xlabel("Eigenvector Centrality")
+    axes[3].set_ylabel("PDF")
+
+    plt.tight_layout()
+    plt.savefig('degree_and_centrality_plots.png', transparent=True, dpi=600, bbox_inches="tight")
     plt.show()
 
