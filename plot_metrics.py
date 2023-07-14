@@ -1,4 +1,5 @@
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 def plot_centrality(subgraph, pos, centrality_measure, filename):
     fig, ax = plt.subplots(1, 1, figsize=(10, 8))
