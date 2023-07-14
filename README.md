@@ -1,13 +1,13 @@
 # Wikipedia pages analysis
 
 ## Requisitos
-- [ ] Generate a directed network from wikipedia pages' links. 
+- [x] Generate a directed network from wikipedia pages' links. 
 - [x] Pick a seed (wikipedia page)
-- [ ] Generate network metrics plot 
-- [ ] Generate KDE plot (degree and some other metric)
-- [ ] Generate pair plot
+- [x] Generate network metrics plot 
+- [x] Generate KDE plot (degree and some other metric)
+- [x] Generate pair plot
 - [ ] Generate shell and core plot
-- [ ] Generate data pipeline 
+- [x] Generate data pipeline 
 
 ## Introduction 
 
@@ -49,10 +49,29 @@ Assigns a measure of importance to nodes based on both their direct connections 
 Top 10 nodes with higher eigenvector centrality:
 <center><img width="800" src="figures/eigenvector_centrality.png"></center>
 
+### K-core and K-shell
+The greatest k-core within this network was determined to be 393, signifying a highly connected group of nodes. This k-core represents a cohesive subset of pages that are intricately interconnected with each other.
+
+Furthermore, the greatest k-shell within this network was found to have a value of 294. A k-shell refers to a subset of nodes that possess a minimum degree within the network. In this case, the k-shell of 294 represents a significant group of nodes with a minimal number of connections to the rest of the network.
+
+These discoveries shed light on the intricate structure and interdependencies within the network of Wikipedia pages stemming from the Gödel Incompleteness Theorems. The existence of such a robust k-core and k-shell underscores the interconnected nature of the topics and concepts associated with this prominent mathematical theorem.
+
 ## Probability Distributions 
+Firstly, focusing on the degree distribution, the probability density function (PDF) reveals that the majority of nodes exhibit degrees ranging from 0 to 50. This suggests that a significant portion of pages within the network have relatively low connectivity. However, intriguingly, there is a small curve in the PDF that emerges between the range of 400 and 600. This indicates the presence of a subset of nodes with notably high degrees, signifying a group of pages with a substantial number of connections. These nodes with high degrees play a crucial role in facilitating information flow and connecting disparate topics within the network.
+
+Similarly, when examining the PDF of eigenvector centrality, a similar trend emerges. The majority of nodes are distributed around low values of eigenvector centrality, indicating that most pages have limited influence or prominence within the network. However, there are notable exceptions, as evidenced by the presence of nodes with high eigenvector centrality values. These nodes hold significant importance in terms of their influence and centrality within the network, likely representing key topics or foundational concepts that have a widespread impact on other pages.
+
+In summary, the probability distributions of the degree and eigenvector centrality within the network of Wikipedia pages starting from the Gödel Incompleteness Theorems demonstrate a pattern of most nodes having low values, while a subset of nodes exhibit high degrees and eigenvector centrality. These distributions highlight the varying levels of connectivity and influence within the network, emphasizing the significance of certain nodes in shaping the overall structure and flow of information within this domain.
 
 <center><img width="800" src="figures/degree_and_centrality_plots.png"></center>
 
 ## Pair Plot with network metrics
+Upon examining the pair plot of network metrics within the directed network of Wikipedia pages, starting from the Gödel Incompleteness Theorems, some intriguing patterns have emerged. While the pair plot may not provide comprehensive insights into the network's overall structure, it does reveal notable correlations between certain metrics and suggests the presence of distinct clusters within the data.
+
+Firstly, the pair plot indicates a correlation between betweenness and degree. This correlation implies that nodes with higher degrees tend to have a greater influence in terms of information flow within the network. Nodes with higher degrees often act as crucial bridges, connecting disparate topics and facilitating the transfer of knowledge across different areas.
+
+Similarly, the pair plot reveals a correlation between eigenvector centrality and closeness. This correlation suggests that nodes with higher eigenvector centrality tend to have a closer proximity to other nodes within the network. This proximity allows these nodes to have more efficient and direct access to information, enhancing their overall centrality and influence within the network.
+
+Moreover, the eigenvector column in the pair plot demonstrates the presence of two distinct clusters. The first cluster represents more popular nodes, characterized by higher eigenvector centrality values. These popular nodes likely correspond to topics or concepts that have garnered significant attention and prominence within the network. Conversely, the second cluster represents a larger group of nodes that are relatively less popular, with lower eigenvector centrality values. These nodes may correspond to less widely known or niche topics within the network.
 
 <center><img width="800" src="figures/all.png"></center>
