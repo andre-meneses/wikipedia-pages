@@ -1,4 +1,5 @@
 import seaborn as sns
+import networkx as nx
 import matplotlib.pyplot as plt
 
 def plot_centrality(subgraph, pos, centrality_measure, filename):
