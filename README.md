@@ -47,7 +47,7 @@ Top 10 nodes with higher betweenness centrality:
 Assigns a measure of importance to nodes based on both their direct connections and the importance of those connections. It takes into account the centrality of a node's neighbors, assigning higher scores to nodes connected to other highly central nodes. Nodes with high eigenvector centrality are influential due to their connections to other influential nodes.
 
 Top 10 nodes with higher eigenvector centrality:
-<center><img width="800" src="figures/k-core_sociopatterns.png"></center>
+<center><img width="800" src="figures/eigenvector_centrality.png"></center>
 
 ### K-core and K-shell
 The greatest k-core within this network was determined to be 393, signifying a highly connected group of nodes. This k-core represents a cohesive subset of pages that are intricately interconnected with each other.
