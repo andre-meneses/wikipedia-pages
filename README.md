@@ -56,7 +56,7 @@ Furthermore, the greatest k-shell within this network was found to have a value 
 
 These discoveries shed light on the intricate structure and interdependencies within the network of Wikipedia pages stemming from the Gödel Incompleteness Theorems. The existence of such a robust k-core and k-shell underscores the interconnected nature of the topics and concepts associated with this prominent mathematical theorem.
 
-<center><img width="800" src="figures/k_c.png"></center>
+<center><img width="800" src="figures/k-core_sociopatterns.png"></center>
 
 ## Probability Distributions 
 Firstly, focusing on the degree distribution, the probability density function (PDF) reveals that the majority of nodes exhibit degrees ranging from 0 to 50. This suggests that a significant portion of pages within the network have relatively low connectivity. However, intriguingly, there is a small curve in the PDF that emerges between the range of 400 and 600. This indicates the presence of a subset of nodes with notably high degrees, signifying a group of pages with a substantial number of connections. These nodes with high degrees play a crucial role in facilitating information flow and connecting disparate topics within the network.
