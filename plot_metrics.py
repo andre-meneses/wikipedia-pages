@@ -50,13 +50,14 @@ def plot_eigenvector_centrality(subgraph, pos):
 def plot_degree_and_centrality(subgraph):
     plt.style.use("fivethirtyeight")
     degree_sequence = sorted([d for n, d in subgraph.degree()], reverse=True)
-    eigenvector_centrality = nx.eigenvector_centrality(subgraph).values()
+    eigenvector_centrality = list(nx.eigenvector_centrality(subgraph).values())
 
     fig, axes = plt.subplots(2, 2, figsize=(12, 10))
     axes = axes.flatten()
 
     # Plot degree CDF
     sns.histplot(degree_sequence, bins=30, cumulative=True, stat="density", ax=axes[0])
+    sns.kdeplot(degree_sequence, cumulative=True, color='r', ax=axes[0])
     axes[0].set_xlabel("Degree")
     axes[0].set_ylabel("CDF")
 
@@ -67,17 +68,18 @@ def plot_degree_and_centrality(subgraph):
     axes[1].set_ylabel("PDF")
 
     # Plot eigenvector centrality CDF
-    sns.histplot(list(eigenvector_centrality), bins=30, cumulative=True, stat="density", ax=axes[2])
+    sns.histplot(eigenvector_centrality, bins=30, cumulative=True, stat="density", ax=axes[2])
+    sns.kdeplot(np.array(eigenvector_centrality), cumulative=True, color='r', ax=axes[2])
     axes[2].set_xlabel("Eigenvector Centrality")
     axes[2].set_ylabel("CDF")
 
     # Plot eigenvector centrality PDF
-    sns.histplot(list(eigenvector_centrality), bins=30, stat="density", ax=axes[3])
-    sns.kdeplot(list(eigenvector_centrality), color='r', ax=axes[3])
+    sns.histplot(eigenvector_centrality, bins=30, stat="density", ax=axes[3])
+    sns.kdeplot(np.array(eigenvector_centrality), color='r', ax=axes[3])
     axes[3].set_xlabel("Eigenvector Centrality")
     axes[3].set_ylabel("PDF")
 
     plt.tight_layout()
     plt.savefig('degree_and_centrality_plots.png', transparent=True, dpi=600, bbox_inches="tight")
-    plt.show()
+    plt.show() 
 
