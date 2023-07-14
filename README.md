@@ -48,3 +48,11 @@ Assigns a measure of importance to nodes based on both their direct connections 
 
 Top 10 nodes with higher eigenvector centrality:
 <center><img width="800" src="figures/eigenvector_centrality.png"></center>
+
+## Probability Distributions 
+
+<center><img width="800" src="figures/probability_density_function.png"></center>
+
+## Pair Plot with network metrics
+
+<center><img width="800" src="figures/all.png"></center>
