@@ -27,17 +27,24 @@ The initial version of the directed graph generated from the "Godel Incompletene
 ### Degree Centrality
 Measures the number of connections (edges) that a node has in a network, relative to the total number of possible connections. It represents the importance or influence of a node based on the proportion of direct connections it has compared to all possible connections in the network. Nodes with higher degree centrality are often considered more central or influential in the network.
 
-Degree centrality for the entire network:
-<center><img width="800" src="figures/degree_centrality_original.png"></center>
-
-Degree centrality for top 10 nodes:
+Top 10 nodes with higher degree centrality:
 <center><img width="800" src="figures/degree_centrality.png"></center>
 
 ### Closeness Centrality
 Quantifies how close a node is to all other nodes in a network. It measures the average shortest path length from a node to all other nodes. Nodes with high closeness centrality are typically able to reach other nodes quickly and efficiently, acting as information brokers or bridges in the network.
 
+Top 10 nodes with higher closeness centrality:
+<center><img width="800" src="figures/closeness_centrality.png"></center>
+
 ### Betweenness Centrality
 Identifies nodes that act as intermediaries or bridges between other nodes in a network. It quantifies how often a node lies on the shortest paths between pairs of nodes. Nodes with high betweenness centrality have significant control over information flow and can facilitate communication between disparate parts of the network.
 
+Top 10 nodes with higher betweenness centrality:
+<center><img width="800" src="figures/betweenness_centrality.png"></center>
+
+
 ### Eigenvector Centrality
 Assigns a measure of importance to nodes based on both their direct connections and the importance of those connections. It takes into account the centrality of a node's neighbors, assigning higher scores to nodes connected to other highly central nodes. Nodes with high eigenvector centrality are influential due to their connections to other influential nodes.
+
+Top 10 nodes with higher eigenvector centrality:
+<center><img width="800" src="figures/eigenvector_centrality.png"></center>
