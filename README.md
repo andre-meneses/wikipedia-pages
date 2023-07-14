@@ -9,6 +9,9 @@ The data pipeline comprises four essential tasks. The initial node is responsibl
 
 <center><img width="800" src="figures/pipeline.svg"></center>
 
+## Run the notebook
+In order to reproduce the results hereby presented, it suffices to run the [notebook](./pipeline.ipynb).
+
 ## Data Cleaning
 
 The initial version of the directed graph generated from the "Godel Incompleteness Theorems" consisted of 24,342 nodes and 119,354 edges. After removing duplicates, the graph was refined to 24,090 nodes and 119,049 edges. Finally, by filtering out all nodes with a degree of one, the resulting graph was reduced to 5,447 nodes and 97,550 edges.
