@@ -27,6 +27,12 @@ The initial version of the directed graph generated from the "Godel Incompletene
 ### Degree Centrality
 Measures the number of connections (edges) that a node has in a network, relative to the total number of possible connections. It represents the importance or influence of a node based on the proportion of direct connections it has compared to all possible connections in the network. Nodes with higher degree centrality are often considered more central or influential in the network.
 
+Degree centrality for the entire network:
+<center><img width="800" src="figures/degree_centrality_original.png"></center>
+
+Degree centrality for top 10 nodes:
+<center><img width="800" src="figures/degree_centrality.png"></center>
+
 ### Closeness Centrality
 Quantifies how close a node is to all other nodes in a network. It measures the average shortest path length from a node to all other nodes. Nodes with high closeness centrality are typically able to reach other nodes quickly and efficiently, acting as information brokers or bridges in the network.
 
