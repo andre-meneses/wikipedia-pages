@@ -51,7 +51,7 @@ Top 10 nodes with higher eigenvector centrality:
 
 ## Probability Distributions 
 
-<center><img width="800" src="figures/probability_density_function.png"></center>
+<center><img width="800" src="figures/degree_and_centrality_plots.png"></center>
 
 ## Pair Plot with network metrics
 
