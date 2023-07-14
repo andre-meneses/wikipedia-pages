@@ -16,7 +16,7 @@ This project is a component of the Algorithm and Data Structure 2 course offered
 ## Data Pipeline
 The data pipeline comprises four essential tasks. The initial node is responsible for fetching data from a specified seed and building the graph. The subsequent node eliminates any duplicate nodes, while the third node filters out nodes with a degree less than 2. Finally, the last node combines computations and generates plots for various network metrics, including degree centrality, closeness centrality, betweenness centrality, and eigenvector centrality.
 
-<center><img width="800" src="figures/pipeline.png"></center>
+<center><img width="800" src="figures/pipeline.svg"></center>
 
 
 ## Network Metrics
