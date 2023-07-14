@@ -12,7 +12,9 @@ The data pipeline comprises four essential tasks. The initial node is responsibl
 ## Run the notebook
 In order to reproduce the results hereby presented, it suffices to run the [notebook](./pipeline.ipynb).
 
-## [Loom video](https://www.loom.com/share/11f668624d8c41ab9542e609c54b01c3?sid=4965e1e5-29ba-4a09-a2a6-8b6b7afc7ece)
+## Loom video
+- Parte I (Unidade II) - [:camera: video](https://www.loom.com/share/11f668624d8c41ab9542e609c54b01c3?sid=4965e1e5-29ba-4a09-a2a6-8b6b7afc7ece)
+- Parte II (Unidade III) - [:camera: video]()
 
 ## Data Cleaning
 
