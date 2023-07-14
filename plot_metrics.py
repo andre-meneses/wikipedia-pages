@@ -7,7 +7,7 @@ def plot_centrality(subgraph, pos, centrality_measure, filename):
     centrality_values = centrality_measure(subgraph)
 
     # Sort nodes based on centrality values and select top 50 nodes
-    top_nodes = sorted(centrality_values, key=centrality_values.get, reverse=True)[:50]
+    top_nodes = sorted(centrality_values, key=centrality_values.get, reverse=True)[:10]
 
     # Create a subgraph with top nodes and their neighbors
     subgraph_top = subgraph.subgraph(top_nodes + list(subgraph.neighbors(n) for n in top_nodes))
@@ -24,7 +24,7 @@ def plot_centrality(subgraph, pos, centrality_measure, filename):
     nodes = nx.draw_networkx_nodes(subgraph_top, pos=pos, node_color=color, cmap=plt.cm.jet, ax=ax)
 
     # Draw labels
-    nx.draw_networkx_labels(subgraph_top, pos=pos, font_color='white', font_size=4, ax=ax)
+    nx.draw_networkx_labels(subgraph_top, pos=pos, font_color='white', font_size=8, ax=ax)
 
     plt.axis("off")
     plt.colorbar(nodes)
@@ -46,11 +46,6 @@ def plot_betweenness_centrality(subgraph, pos):
 
 def plot_eigenvector_centrality(subgraph, pos):
     plot_centrality(subgraph, pos, nx.eigenvector_centrality, 'eigenvector_centrality.png')
-
-
-import matplotlib.pyplot as plt
-import seaborn as sns
-import networkx as nx
 
 def plot_degree_and_centrality(subgraph):
     plt.style.use("fivethirtyeight")
