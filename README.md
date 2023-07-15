@@ -126,10 +126,7 @@ It is possible to use gephi to plot the 343-core as well:
 <center><img width="800" src="figures/gephi_graph_core.svg"></center>
 
 ## Gephisto Visualization
-By using the [enhanced.graphml](./graphml/enhanced.graphml) file, we use [retina](https://ouestware.gitlab.io/retina/beta/#/) to visualize the graph. The color scheme was preserved and the nodes were sized based on the eigenvector centrality. 
+By using the [enhanced.graphml](./graphml/enhanced.graphml) file, we used [gephisto](https://jacomyma.github.io/gephisto/) to generate another visualization of the graph. We can now see different nodes displayed and a different color scheme, which gives a different perspective on the network .
 
-<center><img width="800" src="figures/graph.png"></center>
+<center><img width="800" src="figures/gephisto.png"></center>
 
-We also used retina to display all of nodes with degree up to 10.
-
-<center><img width="800" src="figures/graph_degree.png"></center>
