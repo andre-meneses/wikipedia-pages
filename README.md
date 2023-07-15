@@ -10,7 +10,12 @@ The data pipeline comprises four essential tasks. The initial node is responsibl
 <center><img width="800" src="figures/pipeline.svg"></center>
 
 ## Run the notebook
-In order to reproduce the results hereby presented, it suffices to run the [notebook](./pipeline.ipynb).
+In order to reproduce the results hereby presented, it suffices to run the [notebook](./pipeline.ipynb) and change the page title to the one that interests you.
+
+```
+pipeline.run("Wikipedia Page")
+
+```
 
 ## Loom video
 - Parte I (Unidade II) - [:camera: video](https://www.loom.com/share/11f668624d8c41ab9542e609c54b01c3?sid=4965e1e5-29ba-4a09-a2a6-8b6b7afc7ece)
@@ -105,6 +110,13 @@ By examining the plot, it becomes apparent that there is a noticeable cluster of
 | 80        | 04.92%   | 54.10%  |
 
 </div>
-To enhance clarity in the visualization, we will now present a filtered graph specifically highlighting nodes with an in-degree greater than 80.  
+
+#### Graph with in-degree > 80
 
 <center><img width="800" src="figures/gephi_graph_80_in.svg"></center>
+
+### K-core
+
+It is possible to use gephi to plot the 343-core as well:
+
+<center><img width="800" src="figures/gephi_graph_core.svg"></center>
