@@ -90,7 +90,7 @@ Nodes with an in-degree exceeding 250 are identified by displaying their names, 
 <center><img width="800" src="figures/gephi_graph.svg"></center>
 
 By examining the plot, it becomes apparent that there is a noticeable cluster of pink nodes with a high degree of connectivity. Conversely, the edges of the graph display numerous nodes with lower degrees. By filtering the graph taking into account the in-degree, only a percentege of nodes and edges are displayed:
-
+<div align="center">
 | In-Degree | Nodes    | Edges   |
 | --------- | -----    | -----   |
 | 4         | 69.68%   | 93.53%  |
@@ -99,7 +99,7 @@ By examining the plot, it becomes apparent that there is a noticeable cluster of
 | 15        | 12.76%   | 67.25%  |
 | 30        | 07.45%   | 61.68%  |
 | 80        | 04.92%   | 54.10%  |
-
+</div>
 To enhance clarity in the visualization, we will now present a filtered graph specifically highlighting nodes with an in-degree greater than 80.
 
 <center><img width="800" src="figures/gephi_graph_80_in.svg"></center>
