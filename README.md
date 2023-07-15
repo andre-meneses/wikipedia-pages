@@ -85,7 +85,7 @@ Using the Gephi software, an improved visualization of the complete network was 
 3. Blue: Accounting for 17.46% of the nodes
 4. Other communities: Representing 35.74% of the nodes
 
-Nodes with an in-degree exceeding 250 are identified by displaying their names, while the size of each node is scaled proportionally to its in-degree.
+Nodes with an in-degree exceeding 250 are identified by displaying their names, while the size of each node is scaled proportionally to its in-degree.  
 
 <center><img width="800" src="figures/gephi_graph.svg"></center>
 
@@ -105,6 +105,6 @@ By examining the plot, it becomes apparent that there is a noticeable cluster of
 | 80        | 04.92%   | 54.10%  |
 
 </div>
-To enhance clarity in the visualization, we will now present a filtered graph specifically highlighting nodes with an in-degree greater than 80.
+To enhance clarity in the visualization, we will now present a filtered graph specifically highlighting nodes with an in-degree greater than 80.  
 
 <center><img width="800" src="figures/gephi_graph_80_in.svg"></center>
