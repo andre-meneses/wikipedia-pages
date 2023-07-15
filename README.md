@@ -16,7 +16,6 @@ In order to reproduce the results hereby presented, it suffices to run the [note
 pipeline.run("Wikipedia Page")
 
 ```
-
 ## Loom video
 - Parte I (Unidade II) - [:camera: video](https://www.loom.com/share/11f668624d8c41ab9542e609c54b01c3?sid=4965e1e5-29ba-4a09-a2a6-8b6b7afc7ece)
 - Parte II (Unidade III) - [:camera: video]()
@@ -83,6 +82,9 @@ Moreover, the eigenvector column in the pair plot demonstrates the presence of t
 
 ## Gephi Plots
 
+## Visualization 
+- [:chart:Github page with interactive network](https://andre-meneses.github.io/networkdeploy/network/)
+
 Using the Gephi software, an improved visualization of the complete network was generated, leading to a visually captivating plot. The nodes were assigned colors corresponding to their respective communities, which were determined using modularity with a resolution of 1.0. The network consists of 9 distinct communities, distributed as follows:
 
 1. Pink: Constituting 24.55% of the nodes
@@ -93,6 +95,8 @@ Using the Gephi software, an improved visualization of the complete network was 
 Nodes with an in-degree exceeding 250 are identified by displaying their names, while the size of each node is scaled proportionally to its in-degree.  
 
 <center><img width="800" src="figures/gephi_graph.svg"></center>
+
+---- 
 
 ### Filtered Graphs
 
@@ -120,3 +124,12 @@ By examining the plot, it becomes apparent that there is a noticeable cluster of
 It is possible to use gephi to plot the 343-core as well:
 
 <center><img width="800" src="figures/gephi_graph_core.svg"></center>
+
+## Gephisto Visualization
+By using the [enhanced.graphml](./graphml/enhanced.graphml) file, we use [retina](https://ouestware.gitlab.io/retina/beta/#/) to visualize the graph. The color scheme was preserved and the nodes were sized based on the eigenvector centrality. 
+
+<center><img width="800" src="figures/graph.png"></center>
+
+We also used retina to display all of nodes with degree up to 10.
+
+<center><img width="800" src="figures/graph_degree.png"></center>
