@@ -18,7 +18,7 @@ pipeline.run("Wikipedia Page")
 ```
 ## Loom video
 - Parte I (Unidade II) - [:camera: video](https://www.loom.com/share/11f668624d8c41ab9542e609c54b01c3?sid=4965e1e5-29ba-4a09-a2a6-8b6b7afc7ece)
-- Parte II (Unidade III) - [:camera: video]()
+- Parte II (Unidade III) - [:camera: video](https://www.loom.com/share/5227fed92e034827ad6b575cd5edd47d?sid=31c0c75f-57a2-4173-9660-54a62952572d)
 
 ## Data Cleaning
 
