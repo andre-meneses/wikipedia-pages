@@ -78,6 +78,15 @@ Moreover, the eigenvector column in the pair plot demonstrates the presence of t
 
 ## Gephi Plots
 
-Gephi software was utilized to produce an enhanced visualization of the entire network, resulting in a more visually appealing plot.
+Using the Gephi software, an improved visualization of the complete network was generated, leading to a visually captivating plot. The nodes were assigned colors corresponding to their respective communities, which were determined using modularity with a resolution of 1.0. The network consists of 9 distinct communities, distributed as follows:
+
+1. Pink: Constituting 24.55% of the nodes
+2. Green: Comprising 22.25% of the nodes
+3. Blue: Accounting for 17.46% of the nodes
+4. Other communities: Representing 35.74% of the nodes
+
+Nodes with an in-degree exceeding 250 are identified by displaying their names, while the size of each node is scaled proportionally to its in-degree.
+
+By examining the plot, it becomes apparent that there is a noticeable cluster of pink nodes with a high degree of connectivity. Conversely, the edges of the graph display numerous nodes with lower degrees. To provide a clearer visualization, we will now display a filtered graph to focus on the relevant information.
 
 <center><img width="800" src="figures/gephi_graph.svg"></center>
