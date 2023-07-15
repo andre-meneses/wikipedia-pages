@@ -82,8 +82,8 @@ Moreover, the eigenvector column in the pair plot demonstrates the presence of t
 
 ## Gephi Plots
 
-## Visualization 
-- [:chart:Github page with interactive network](https://andre-meneses.github.io/networkdeploy/network/)
+### Visualization 
+- [:chart: Github page with interactive network](https://andre-meneses.github.io/networkdeploy/network/)
 
 Using the Gephi software, an improved visualization of the complete network was generated, leading to a visually captivating plot. The nodes were assigned colors corresponding to their respective communities, which were determined using modularity with a resolution of 1.0. The network consists of 9 distinct communities, distributed as follows:
 
