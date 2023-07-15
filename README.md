@@ -75,3 +75,9 @@ Similarly, the pair plot reveals a correlation between eigenvector centrality an
 Moreover, the eigenvector column in the pair plot demonstrates the presence of two distinct clusters. The first cluster represents more popular nodes, characterized by higher eigenvector centrality values. These popular nodes likely correspond to topics or concepts that have garnered significant attention and prominence within the network. Conversely, the second cluster represents a larger group of nodes that are relatively less popular, with lower eigenvector centrality values. These nodes may correspond to less widely known or niche topics within the network.
 
 <center><img width="800" src="figures/all.png"></center>
+
+## Gephi Plots
+
+Gephi software was utilized to produce an enhanced visualization of the entire network, resulting in a more visually appealing plot.
+
+<center><img width="800" src="figures/gephi_graph.svg"></center>
