@@ -10,8 +10,12 @@ The data pipeline comprises four essential tasks. The initial node is responsibl
 <center><img width="800" src="figures/pipeline.svg"></center>
 
 ## Run the notebook
-In order to reproduce the results hereby presented, it suffices to run the [notebook](./pipeline.ipynb).
+In order to reproduce the results hereby presented, it suffices to run the [notebook](./pipeline.ipynb) and change the page title to the one that interests you.
 
+```
+pipeline.run("Wikipedia Page")
+
+```
 ## Loom video
 - Parte I (Unidade II) - [:camera: video](https://www.loom.com/share/11f668624d8c41ab9542e609c54b01c3?sid=4965e1e5-29ba-4a09-a2a6-8b6b7afc7ece)
 - Parte II (Unidade III) - [:camera: video]()
@@ -75,3 +79,54 @@ Similarly, the pair plot reveals a correlation between eigenvector centrality an
 Moreover, the eigenvector column in the pair plot demonstrates the presence of two distinct clusters. The first cluster represents more popular nodes, characterized by higher eigenvector centrality values. These popular nodes likely correspond to topics or concepts that have garnered significant attention and prominence within the network. Conversely, the second cluster represents a larger group of nodes that are relatively less popular, with lower eigenvector centrality values. These nodes may correspond to less widely known or niche topics within the network.
 
 <center><img width="800" src="figures/all.png"></center>
+
+## Gephi Plots
+
+### Visualization 
+- [:chart: Github page with interactive network](https://andre-meneses.github.io/networkdeploy/network/)
+
+Using the Gephi software, an improved visualization of the complete network was generated, leading to a visually captivating plot. The nodes were assigned colors corresponding to their respective communities, which were determined using modularity with a resolution of 1.0. The network consists of 9 distinct communities, distributed as follows:
+
+1. Pink: Constituting 24.55% of the nodes
+2. Green: Comprising 22.25% of the nodes
+3. Blue: Accounting for 17.46% of the nodes
+4. Other communities: Representing 35.74% of the nodes
+
+Nodes with an in-degree exceeding 250 are identified by displaying their names, while the size of each node is scaled proportionally to its in-degree.  
+
+<center><img width="800" src="figures/gephi_graph.svg"></center>
+
+---- 
+
+### Filtered Graphs
+
+By examining the plot, it becomes apparent that there is a noticeable cluster of pink nodes with a high degree of connectivity. Conversely, the edges of the graph display numerous nodes with lower degrees. By filtering the graph taking into account the in-degree, only a percentege of nodes and edges are displayed:
+
+<div align="center">
+
+| In-Degree | Nodes    | Edges   |
+| --------- | -----    | -----   |
+| 4         | 69.68%   | 93.53%  |
+| 5         | 49.78%   | 87.15%  |
+| 10        | 22.33%   | 74.85%  |
+| 15        | 12.76%   | 67.25%  |
+| 30        | 07.45%   | 61.68%  |
+| 80        | 04.92%   | 54.10%  |
+
+</div>
+
+#### Graph with in-degree > 80
+
+<center><img width="800" src="figures/gephi_graph_80_in.svg"></center>
+
+### K-core
+
+It is possible to use gephi to plot the 343-core as well:
+
+<center><img width="800" src="figures/gephi_graph_core.svg"></center>
+
+## Gephisto Visualization
+By using the [enhanced.graphml](./graphml/enhanced.graphml) file, we used [gephisto](https://jacomyma.github.io/gephisto/) to generate another visualization of the graph. We can now see different nodes displayed and a different color scheme, which gives a different perspective on the network .
+
+<center><img width="800" src="figures/gephisto.png"></center>
+
