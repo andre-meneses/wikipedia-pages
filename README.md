@@ -10,8 +10,7 @@ The data pipeline comprises four essential tasks. The initial node is responsibl
 <center><img width="800" src="figures/pipeline.svg"></center>
 
 ## Run the notebook
-In order to reproduce the results hereby presented, it suffices to run the [notebook](./pipeline.ipynb) and change the page title to the one that interests you.
-
+To replicate the presented results, simply execute the notebook and modify the page title to the desired one.
 ```
 pipeline.run("Wikipedia Page")
 
